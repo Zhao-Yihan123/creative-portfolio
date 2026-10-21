@@ -23,16 +23,136 @@
   <div class="details">
     <p class="eyebrow">AI PRODUCT MARKETING</p>
     <h3>AI-Powered Probiotic Product Video</h3>
-    <p>I independently produced an AI-powered promotional video using Jimeng AI to visualize how probiotics interact with the digestive system. The goal was to make product information more engaging and easier for consumers to understand through creative storytelling.独立使用即梦 AI 制作了一条益生菌产品宣传视频。视频通过创意性的视觉叙事，将益生菌进入人体消化系统后的作用过程进行可视化呈现，帮助观众了解益生菌与肠道健康之间的关系。该项目旨在将复杂的产品知识转化为直观、易理解且具有吸引力的视频内容，在向消费者传递产品信息的同时，提高宣传内容的趣味性与吸引力。</p>
-    <p class="role"><strong>My role:</strong> End-to-end production: concept development, creative direction, AI video generation, editing, and subtitles.独立负责从创意构思、视觉叙事设计、AI 视频生成，到后期剪辑及字幕制作的完整创作流程。<br><strong>Tool:</strong> Jimeng AI</p>
+    <p>I independently produced an AI-powered promotional video using Jimeng AI to visualize how probiotics interact with the digestive system. The goal was to make product information more engaging and easier for consumers to understand through creative storytelling.</p>
+    <p class="role"><strong>My role:</strong> End-to-end production: concept development, creative direction, AI video generation, editing, and subtitles.<br><strong>Tool:</strong> Jimeng AI</p>
     <a class="project-link" href="https://youtu.be/uLsxzUAiB4g" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
   </div>
 </article>
-<article class="project"><div class="visual product"><span class="big-number">02</span><span class="label">COMMERCIAL VIDEO</span></div><div class="details"><p class="eyebrow">PRODUCT STORYTELLING</p><h3>Factory & Product Promotion</h3><p>Factory introduction and product-focused short videos for digital marketing and cross-border e-commerce audiences.</p><p class="role"><strong>My role:</strong> Add what you planned, filmed and edited</p><a class="project-link" href="#" data-placeholder="true">Watch videos ↗</a></div></article>
-<article class="project"><div class="visual personal"><span class="big-number">03</span><span class="label">PERSONAL BRANDING</span></div><div class="details"><p class="eyebrow">SOCIAL MEDIA</p><h3>Personal IP & Vlogs</h3><p>A personal content channel featuring storytelling, lifestyle and short-form videos. Highlight your content strategy and selected work.</p><p class="role"><strong>My role:</strong> Creative direction · filming · editing (adjust to your work)</p><a class="project-link" href="#" data-placeholder="true">Explore channel ↗</a></div></article>
+<!-- Commercial video gallery: paste your YouTube IDs into the galleryVideos array at the bottom of this file. -->
+<section class="commercial-gallery" id="commercial-gallery" aria-labelledby="commercial-heading">
+  <div class="gallery-heading">
+    <p class="eyebrow">02 / COMMERCIAL VIDEO PRODUCTION</p>
+    <h3 id="commercial-heading">Factory &amp; Product Promotion</h3>
+    <p>A curated collection of five factory videos and five product promotional videos, including spoken presentations and narrative-led content.</p>
+  </div>
+  <div class="gallery-stage" id="gallery-stage" aria-live="polite">
+    <div class="gallery-empty" id="gallery-empty"><span>VIDEO COLLECTION</span><p>Commercial video selections will appear here.</p></div>
+    <iframe id="gallery-player" title="Commercial video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen hidden></iframe>
+  </div>
+  <div class="gallery-selection" id="gallery-selection" aria-label="Choose a commercial video"></div>
+  <p class="gallery-footnote">Project videos are displayed for portfolio review. Individual production responsibilities can be described alongside each selected video.</p>
+</section>
+<section class="ip-gallery" id="personal-ip" aria-labelledby="ip-title">
+ <div class="ip-heading">
+  <p class="eyebrow">03 / PERSONAL BRANDING</p>
+  <h3 id="ip-title">Personal IP &amp; Social Media</h3>
+  <p>A selection of videos from my personal content account, presented through an account overview and individual video projects.</p>
+ </div>
+ <div class="ip-spotlight">
+  <div class="ip-video-wrap"><iframe id="ip-player" src="https://www.youtube.com/embed/rNtBmvDBw0g" title="Personal account overview — screen recording" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+  <div class="ip-spotlight-text">
+   <p class="eyebrow" id="ip-current-label">FEATURED / ACCOUNT OVERVIEW</p>
+   <h4 id="ip-current-title">My Content Account</h4>
+   <p id="ip-current-description">A screen-recorded overview of my personal content account. Explore the featured account presentation, then select a video below to watch more work.</p>
+   <a id="ip-current-link" class="project-link" href="https://youtube.com/shorts/rNtBmvDBw0g" target="_blank" rel="noopener noreferrer">Open on YouTube ↗</a>
+  </div>
+ </div>
+ <div class="ip-clips-head"><h4>Selected Videos</h4><p>Choose a video to play in the featured player.</p></div>
+ <div class="ip-clip-grid" id="ip-clip-grid"></div>
+</section>
 </section>
 <section id="about" class="about"><p class="eyebrow">ABOUT</p><h2>Content with purpose.</h2><p>I'm interested in the intersection of creative storytelling, social platforms and marketing. My projects span AI-assisted video, commercial promotion and personal content creation.</p></section>
 <section id="contact" class="contact"><p class="eyebrow">LET'S CONNECT</p><h2>Interested in collaborating?</h2><p>Add your professional email, LinkedIn or preferred contact link here.</p></section></main>
 <footer>© <span id="year">2026</span> Creative Portfolio · Built with GitHub Pages</footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();document.querySelectorAll('[data-placeholder]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();alert('Replace this link with your real video or profile URL in index.html.')}));</script>
+
+<script>
+/* ADD YOUR VIDEOS HERE. Copy the ID from https://youtu.be/VIDEO_ID .
+   Replace each empty id with your real 11-character YouTube video ID.
+   You can add as many objects as you like. Leave id empty until a video is ready. */
+const galleryVideos = [
+  { title: 'Factory Video 01', category: 'factory', id: 'DyrcPNmumxI', description: 'Factory promotional video · Short-form' },
+  { title: 'Factory Video 02', category: 'factory', id: 'GAHxlh6G7RQ', description: 'Factory promotional video · Short-form' },
+  { title: 'Factory Video 03', category: 'factory', id: 'Ls0r7ZO7QRM', description: 'Factory promotional video · Short-form' },
+  { title: 'Factory Video 04', category: 'factory', id: 'ykarV2m9jpQ', description: 'Factory promotional video' },
+  { title: 'Factory Video 05', category: 'factory', id: '_WPOxagLxCc', description: 'Factory promotional video · Short-form' },
+  { title: 'Product Video 01', category: 'product', id: 'E_R83Ssgz-4', description: 'Product promotional video · Spoken or narrative format' },
+  { title: 'Product Video 02', category: 'product', id: 'l5y_-yf4leE', description: 'Product promotional video · Spoken or narrative format' },
+  { title: 'Product Video 03', category: 'product', id: '0SB9b6c7kXI', description: 'Product promotional video · Spoken or narrative format' },
+  { title: 'Product Video 04', category: 'product', id: 'o74q2rAAx2w', description: 'Product promotional video · Spoken or narrative format' },
+  { title: 'Product Video 05', category: 'product', id: '7kyAyyra_bU', description: 'Product promotional video · Spoken or narrative format' }
+];
+const choices = document.getElementById('gallery-selection');
+const player = document.getElementById('gallery-player');
+const empty = document.getElementById('gallery-empty');
+const stage = document.getElementById('gallery-stage');
+function playGalleryVideo(item, button) {
+  if (!/^[a-zA-Z0-9_-]{11}$/.test(item.id)) return;
+  player.src = 'https://www.youtube.com/embed/' + item.id + '?rel=0';
+  player.title = item.title;
+  player.hidden = false;
+  empty.hidden = true;
+  document.querySelectorAll('.gallery-choice').forEach(el => {
+    el.classList.remove('selected'); el.setAttribute('aria-pressed', 'false');
+  });
+  button.classList.add('selected'); button.setAttribute('aria-pressed', 'true');
+}
+const galleryGroups = [
+  { key: 'factory', title: 'Factory Videos', intro: 'Factory branding and manufacturing content' },
+  { key: 'product', title: 'Product Videos', intro: 'Product presentations, spoken reviews and narrative-led promotional content' }
+];
+const videoButtons = [];
+galleryGroups.forEach(group => {
+  const section = document.createElement('section'); section.className = 'gallery-group';
+  const heading = document.createElement('h4'); heading.textContent = group.title;
+  const intro = document.createElement('p'); intro.textContent = group.intro;
+  const cards = document.createElement('div'); cards.className = 'gallery-choice-grid';
+  section.append(heading, intro, cards); choices.appendChild(section);
+  galleryVideos.filter(item => item.category === group.key).forEach(item => {
+    const ready = /^[a-zA-Z0-9_-]{11}$/.test(item.id);
+    const button = document.createElement('button'); button.type = 'button';
+    button.className = 'gallery-choice' + (ready ? '' : ' awaiting-video');
+    button.disabled = !ready; button.setAttribute('aria-pressed', 'false');
+    const cover = document.createElement('span'); cover.className = 'gallery-choice-cover';
+    if (ready) cover.style.backgroundImage = `url(https://img.youtube.com/vi/${item.id}/hqdefault.jpg)`;
+    const label = document.createElement('span'); label.className = 'gallery-choice-label';
+    const category = document.createElement('small'); category.textContent = group.title.toUpperCase();
+    const title = document.createElement('strong'); title.textContent = item.title;
+    const detail = document.createElement('span'); detail.textContent = ready ? item.description : 'Video link to be added';
+    label.append(category,title,detail); button.append(cover,label);
+    if (ready) button.addEventListener('click', () => playGalleryVideo(item, button));
+    cards.appendChild(button); videoButtons.push({item,button});
+  });
+});
+const firstAvailable = videoButtons.find(({button}) => !button.disabled);
+if (firstAvailable) playGalleryVideo(firstAvailable.item, firstAvailable.button);
+</script>
+<script>
+// Edit this list to rename individual projects once their actual content has been reviewed.
+const ipVideos = [
+ {id:'rNtBmvDBw0g', title:'My Content Account', description:'Screen-recorded overview of the personal content account.', tag:'FEATURED / ACCOUNT OVERVIEW', url:'https://youtube.com/shorts/rNtBmvDBw0g'},
+ {id:'HxVBt69dl_0', title:'Personal Video 01', description:'A selected video from my personal content account.', tag:'SELECTED PERSONAL CONTENT', url:'https://youtu.be/HxVBt69dl_0'},
+ {id:'yDk1XiKdTqQ', title:'Personal Video 02', description:'A selected video from my personal content account.', tag:'SELECTED PERSONAL CONTENT', url:'https://youtu.be/yDk1XiKdTqQ'},
+ {id:'AoLqaCFxctI', title:'Personal Video 03', description:'A selected video from my personal content account.', tag:'SELECTED PERSONAL CONTENT', url:'https://youtu.be/AoLqaCFxctI'},
+ {id:'WyHqphegMx0', title:'Personal Video 04', description:'A selected video from my personal content account.', tag:'SELECTED PERSONAL CONTENT', url:'https://youtu.be/WyHqphegMx0'}
+];
+const ipPlayer=document.getElementById('ip-player'),ipGrid=document.getElementById('ip-clip-grid');
+function selectIpVideo(v,selectedButton){
+ ipPlayer.src=`https://www.youtube.com/embed/${v.id}`;
+ ipPlayer.title=v.title;
+ document.getElementById('ip-current-label').textContent=v.tag;
+ document.getElementById('ip-current-title').textContent=v.title;
+ document.getElementById('ip-current-description').textContent=v.description;
+ document.getElementById('ip-current-link').href=v.url;
+ document.querySelectorAll('.ip-clip').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false')});
+ if(selectedButton){selectedButton.classList.add('active');selectedButton.setAttribute('aria-pressed','true')}
+}
+ipVideos.slice(1).forEach(v=>{
+ const b=document.createElement('button');b.type='button';b.className='ip-clip';b.setAttribute('aria-pressed','false');
+ const pic=document.createElement('span');pic.className='ip-clip-cover';pic.style.backgroundImage=`url(https://img.youtube.com/vi/${v.id}/hqdefault.jpg)`;
+ const title=document.createElement('strong');title.textContent=v.title;
+ const play=document.createElement('span');play.className='ip-clip-play';play.textContent='▶ Play';
+ b.append(pic,title,play);b.addEventListener('click',()=>selectIpVideo(v,b));ipGrid.appendChild(b)
+});
+</script>
 </body></html>

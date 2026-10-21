@@ -21,33 +21,63 @@
   .project-featured .ai-video-feature iframe { min-height: 0; aspect-ratio: 16 / 9; }
 }
 
-/* Make the featured video fill the left panel */
-.project-featured .ai-video-feature {
-  position: relative;
-  padding: 0;
-  min-height: 520px;
-  background: #16151a;
-  overflow: hidden;
-}
+/* Commercial portfolio gallery */
+.commercial-gallery{background:#fff;padding:44px 48px 50px;margin:22px 0 25px;border:1px solid var(--line)}
+.gallery-heading{max-width:770px;margin:0 0 25px}
+.gallery-heading h3{font-size:clamp(32px,4vw,51px);letter-spacing:-.05em;line-height:1.04;margin:7px 0 16px}
+.gallery-heading>p:last-child,.gallery-footnote{color:var(--muted);line-height:1.7;font-size:15px}
+.gallery-stage{position:relative;aspect-ratio:16/9;background:#16151a;overflow:hidden}
+.gallery-stage iframe{display:block;width:100%;height:100%;border:0}
+.gallery-stage iframe[hidden]{display:none}
+.gallery-empty{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px;background:linear-gradient(140deg,#2a3440,#56536a)}
+.gallery-empty[hidden]{display:none}
+.gallery-empty span{letter-spacing:.22em;font-size:11px;font-weight:700;color:#ded7d5}
+.gallery-empty p{color:#fff;font-size:19px}
+.gallery-selection{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:17px}
+.gallery-choice{cursor:pointer;text-align:left;background:#faf9f7;color:var(--ink);border:1px solid var(--line);padding:0;min-width:0;transition:border-color .2s,transform .2s}
+.gallery-choice:not(:disabled):hover{transform:translateY(-2px);border-color:var(--accent)}
+.gallery-choice.selected{border:2px solid var(--accent)}
+.gallery-choice.awaiting-video{cursor:default;opacity:.74}
+.gallery-choice-cover{display:block;background:linear-gradient(135deg,#394e4a,#b6b0a3);background-position:center;background-size:cover;aspect-ratio:16/9;position:relative}
+.gallery-choice:not(:disabled) .gallery-choice-cover::after{content:'▶';position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:30px;text-shadow:0 1px 12px #333}
+.gallery-choice-label{display:flex;flex-direction:column;padding:14px;gap:5px}
+.gallery-choice-label small{font-size:10px;color:var(--accent);font-weight:700;letter-spacing:.12em}
+.gallery-choice-label strong{font-size:15px;line-height:1.3}
+.gallery-choice-label>span{font-size:12px;color:var(--muted);line-height:1.5}
+.gallery-footnote{margin-top:22px;font-size:12px}
+@media(max-width:720px){.commercial-gallery{padding:25px 20px}.gallery-selection{grid-template-columns:1fr}.gallery-choice{display:grid;grid-template-columns:38% 1fr}.gallery-choice-cover{height:100%;min-height:104px}.gallery-choice-label{justify-content:center}}
 
-.project-featured .ai-video-feature iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
-  border: none;
-}
+/* Exactly two content categories: factory and product */
+.gallery-selection {display:block;margin-top:25px}
+.gallery-group {margin-top:26px}
+.gallery-group h4 {font-size:23px;letter-spacing:-.035em;margin:0 0 5px}
+.gallery-group>p {color:var(--muted);font-size:13px;margin:0 0 14px}
+.gallery-choice-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media(max-width:720px){.gallery-choice-grid{grid-template-columns:1fr}}
+/* Maintain the already-approved large player for the featured AI project */
+.project-featured .ai-video-feature{position:relative;padding:0;min-height:520px;overflow:hidden;background:#16151a}
+.project-featured .ai-video-feature iframe{position:absolute;inset:0;width:100%;height:100%;min-height:0;border:0}
+@media(max-width:720px){.project-featured .ai-video-feature{min-height:0;aspect-ratio:16/9}}
 
-.project-featured .ai-video-feature::after {
-  display: none;
-}
-
-/* Responsive layout for mobile */
-@media (max-width: 720px) {
-  .project-featured .ai-video-feature {
-    min-height: 0;
-    aspect-ratio: 16 / 9;
-  }
-}
+/* Personal IP: large account-overview video and four selectable videos */
+.ip-gallery{background:#fff;border:1px solid var(--line);padding:46px 48px 52px;margin:22px 0 26px}
+.ip-heading{max-width:770px;margin-bottom:25px}
+.ip-heading h3{font-size:clamp(32px,4vw,51px);letter-spacing:-.05em;line-height:1.04;margin:7px 0 16px}
+.ip-heading>p:last-child{color:var(--muted);line-height:1.7}
+.ip-spotlight{display:grid;grid-template-columns:1.38fr 1fr;background:#f6f3ee;min-height:420px}
+.ip-video-wrap{min-height:420px;background:#181820;position:relative;overflow:hidden}
+.ip-video-wrap iframe{position:absolute;inset:0;border:0;width:100%;height:100%}
+.ip-spotlight-text{padding:34px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.ip-spotlight-text h4{font-size:clamp(27px,3vw,39px);letter-spacing:-.045em;line-height:1.15;margin:8px 0 14px}
+.ip-spotlight-text>p:not(.eyebrow){font-size:15px;line-height:1.7;color:var(--muted)}
+.ip-clips-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:33px}
+.ip-clips-head h4{font-size:24px;letter-spacing:-.04em;margin:0 0 15px}
+.ip-clips-head p{color:var(--muted);font-size:13px}
+.ip-clip-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ip-clip{min-width:0;display:flex;flex-direction:column;gap:8px;cursor:pointer;text-align:left;background:#faf9f7;border:1px solid var(--line);padding:0 0 14px;color:var(--ink)}
+.ip-clip:hover,.ip-clip.active{border-color:var(--accent)}
+.ip-clip-cover{aspect-ratio:16/9;background:#333 center/cover;position:relative;display:block;width:100%}
+.ip-clip-cover::after{content:'▶';position:absolute;inset:0;display:grid;place-items:center;font-size:26px;color:#fff;text-shadow:0 2px 10px #000}
+.ip-clip strong,.ip-clip-play{padding:0 12px}.ip-clip strong{font-size:14px}.ip-clip-play{font-size:12px;color:var(--accent)}
+@media(max-width:800px){.ip-spotlight{grid-template-columns:1fr}.ip-video-wrap{min-height:0;aspect-ratio:16/9}.ip-clip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.ip-gallery{padding:25px 20px}.ip-spotlight-text{padding:25px}.ip-clips-head{display:block}.ip-clips-head p{margin-top:0}}
