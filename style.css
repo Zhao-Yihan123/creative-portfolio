@@ -81,3 +81,49 @@
 .ip-clip strong,.ip-clip-play{padding:0 12px}.ip-clip strong{font-size:14px}.ip-clip-play{font-size:12px;color:var(--accent)}
 @media(max-width:800px){.ip-spotlight{grid-template-columns:1fr}.ip-video-wrap{min-height:0;aspect-ratio:16/9}.ip-clip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.ip-gallery{padding:25px 20px}.ip-spotlight-text{padding:25px}.ip-clips-head{display:block}.ip-clips-head p{margin-top:0}}
+
+
+/* Commercial gallery: all ten independently playable videos */
+.all-videos-gallery { background:#fff; padding:46px 48px 54px; }
+.video-category { margin-top:38px; padding-top:25px; border-top:1px solid var(--line); }
+.video-category-heading {display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+.video-category-heading h4 {font-size:27px;letter-spacing:-.045em;margin:0}
+.video-category-heading p {margin:0;color:var(--muted);font-size:13px}
+.all-video-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 16px;align-items:start}
+.video-tile {background:#faf9f7;border:1px solid var(--line);min-width:0;overflow:hidden}
+.tile-player {background:#1b1b1f;position:relative;overflow:hidden;aspect-ratio:9/13}
+.tile-player.landscape {aspect-ratio:16/9}
+.tile-player iframe {display:block;position:absolute;inset:0;width:100%;height:100%;border:0}
+.tile-meta {padding:14px 13px 16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.tile-number {font-size:11px;color:var(--accent);font-weight:700;letter-spacing:.1em}
+.tile-meta strong {font-size:13px;flex:1;min-width:110px}
+.tile-meta a {color:var(--accent);font-size:12px;font-weight:700;white-space:nowrap}
+@media(max-width:880px){.all-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.all-videos-gallery{padding:26px 16px}.all-video-grid{grid-template-columns:1fr;max-width:440px;margin:auto}.tile-player{aspect-ratio:9/12}.video-category-heading{display:block}.video-category-heading p{margin-top:7px}}
+
+/* Project responsibilities — portfolio copy update */
+.category-role {font-size: 14px; line-height: 1.7; color: #57544f; margin: 8px 0 20px; max-width: 860px;}
+.category-role strong {color: #171717;}
+.ip-role {margin: 0 0 26px;}
+
+/* Bilingual personal introduction (above project gallery) */
+.hero {padding-top:85px;padding-bottom:75px;min-height:0}
+.hero h1 {font-size:clamp(48px,6.1vw,83px);line-height:1.09;letter-spacing:-.065em;max-width:1080px}
+.hero h1 em {font-size:.94em}
+.hero .lede {max-width:850px}
+.intro-profile {margin:42px 0 0;padding:35px 0 8px;border-top:1px solid var(--line)}
+.intro-columns {display:grid;grid-template-columns:1fr 1fr;gap:42px;margin-top:18px}
+.language-label {font-weight:700;font-size:11px;letter-spacing:.12em;color:var(--accent)}
+.intro-language p {color:#54514f;font-size:15px;line-height:1.85;margin:12px 0}
+.ip-metrics {display:flex;align-items:center;flex-wrap:wrap;gap:18px 32px;margin-top:23px;padding:20px 22px;background:#f7f5f1;border-left:3px solid var(--accent)}
+.ip-metrics div {display:flex;flex-direction:column;gap:2px}
+.ip-metrics strong {font-size:29px;letter-spacing:-.05em;color:var(--ink)}
+.ip-metrics span {font-size:12px;color:var(--muted)}
+.ip-metrics p {font-size:12px;color:var(--muted);margin:0;flex-basis:100%}
+.production-note {font-size:13px;color:var(--muted);line-height:1.65;margin:18px 0 10px;max-width:780px}
+.contact-intro {font-size:17px;line-height:1.7;color:var(--muted)}
+.contact-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:25px 0 0;max-width:790px}
+.contact-links a {background:#fff;padding:18px 20px;border:1px solid var(--line);font-size:15px;font-weight:600;overflow-wrap:anywhere;transition:border-color .2s}
+.contact-links a:hover {border-color:var(--accent)}
+.contact-links span {display:block;color:var(--accent);letter-spacing:.12em;font-size:10px;margin-bottom:6px}
+@media(max-width:720px){.hero h1{font-size:clamp(37px,9vw,61px)}.intro-columns{grid-template-columns:1fr;gap:14px}.contact-links{grid-template-columns:1fr}.intro-profile{margin-top:28px}}
